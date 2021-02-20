@@ -8,7 +8,7 @@ public class HealthbarVar : MonoBehaviour
 void Start(){
 
 GameObject Player = GameObject.Find("Player");
-PlayerLives playerLives = Player.GetComponent<playerLives>();
+PlayerLives playerLives = Player.GetComponent<PlayerLives>();
 
 healthbarVarCounter = playerLives.playerLiveCounter;
 
