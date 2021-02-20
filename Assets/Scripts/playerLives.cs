@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerLives : MonoBehaviour
+public class PlayerLives : MonoBehaviour
 {
     public int playerLiveCounter;
     void Start()

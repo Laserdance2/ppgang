@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class exitGameScript : MonoBehaviour
+public class ExitGameScript : MonoBehaviour
 {
     
     void Start()
