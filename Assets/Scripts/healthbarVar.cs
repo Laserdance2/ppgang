@@ -1,18 +1,21 @@
 ﻿
 using UnityEngine;
 using UnityEngine.UI;
+
 public class HealthbarVar : MonoBehaviour
 {
     public int healthbarVarCounter;
     public Text healthText;
-void Start(){
+    
+    void Start()
+    {
 
-GameObject Player = GameObject.Find("Player");
-PlayerLives playerLives = Player.GetComponent<PlayerLives>();
+        GameObject Player = GameObject.Find("Player");
+        PlayerLives playerLives = Player.GetComponent<PlayerLives>();
 
-healthbarVarCounter = playerLives.playerLiveCounter;
+        healthbarVarCounter = playerLives.playerLiveCounter;
 
-}
+    }
 
     
     void Update()
