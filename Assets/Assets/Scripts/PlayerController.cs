@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        CheckInput();     
+        CheckInput();
     }
 
     private void FixedUpdate()
@@ -83,7 +83,6 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-
     }
     private void CheckGround()
     {
@@ -221,6 +220,5 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
-
 }
 
