@@ -19,7 +19,11 @@ public class Movement : MonoBehaviour
     public float jumpForce = 50;
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
-	private float dashSpeed = 0;
+	private float dashSpeed = 50;
+    private int dashCharge = 3;
+    private int dashUsed = 0;
+    private float dashRecharge = 1f;
+
 
     [Space]
     [Header("Booleans")]
@@ -35,7 +39,7 @@ public class Movement : MonoBehaviour
     private bool hasDashed;
     private bool isDashing;
     private bool atCamEdge;
-
+    private float timeElapsed = 0;
     public int side = 1;
 
     [Space]
@@ -61,6 +65,16 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeElapsed += Time.deltaTime;
+        if (dashCharge >= dashUsed && dashUsed > 0)
+        {
+            if (timeElapsed >=dashRecharge)
+            {
+                dashUsed -= 1;
+                timeElapsed = 0;
+            }
+
+        }
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
@@ -69,7 +83,7 @@ public class Movement : MonoBehaviour
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
-
+        //camera stuff
         Vector3 cambound = Camera.main.WorldToViewportPoint(transform.position);
 
         if (cambound.x < 0.02)
@@ -83,13 +97,13 @@ public class Movement : MonoBehaviour
             atCamEdge = false;
         }
 
-
+        //make it so you can jump if you are on the ground
         if (coll.onGround && !isDashing)
         {
             wallJumped = false;
             GetComponent<BetterJumping>().enabled = true;
         }
-        
+        //wallgrab
         if (wallGrab && !isDashing)
         {
             rb.gravityScale = 0;
@@ -104,16 +118,16 @@ public class Movement : MonoBehaviour
         {
             rb.gravityScale = 3;
         }
-
+        //wallslide
         if(coll.onWall && !coll.onGround && !isJumping && !atCamEdge && !bjump.inWater)
         {
              wallSlide = true;
              WallSlide();
         }
-
+        //not wallslide
         if (!coll.onWall || coll.onGround || bjump.inWater)
             wallSlide = false;
-
+        //jumping
         if (Input.GetButtonDown("Jump"))
         {
             anim.SetTrigger("jump");
@@ -124,11 +138,25 @@ public class Movement : MonoBehaviour
             if (coll.onWall && !coll.onGround && !atCamEdge && !bjump.inWater)
                 WallJump();
         }
-		
-		if(rb.velocity.y <= 0){
+        //dashing
+        if (Input.GetButtonDown("Dash") && hasDashed == false && dashUsed < dashCharge)
+        {
+            anim.SetTrigger("dash");
+            isDashing = true;
+            if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+            {
+                Dash(side, 0f);
+            }
+            else
+            {
+                Dash(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            }
+        }
+        //disabling the jump if you are falling down
+        if (rb.velocity.y <= 0){
 			isJumping = false;
 		}
-		
+		//no rotation to the player
 		if(rb.velocity.x != 0)
              rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 		
@@ -139,7 +167,7 @@ public class Movement : MonoBehaviour
 
 
 
-
+        //check if player is on the ground
         if (coll.onGround && !groundTouch)
         {
             GroundTouch();
@@ -150,7 +178,7 @@ public class Movement : MonoBehaviour
         {
             groundTouch = false;
         }
-
+        //particles
         WallParticle(y);
 
         if (wallGrab || wallSlide || !canMove)
@@ -170,7 +198,7 @@ public class Movement : MonoBehaviour
 
     }
 	
-
+    //stuff that happens when you are on the ground
     void GroundTouch()
     {
         hasDashed = false;
@@ -184,12 +212,13 @@ public class Movement : MonoBehaviour
     }
 	
 
-
+    //dash
     private void Dash(float x, float y)
     {
+        dashUsed++;
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
-        FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
+        //FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
 
         hasDashed = true;
 
@@ -204,7 +233,7 @@ public class Movement : MonoBehaviour
 
     IEnumerator DashWait()
     {
-        FindObjectOfType<GhostTrail>().ShowGhost();
+        //FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
         DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
 
@@ -307,7 +336,7 @@ public class Movement : MonoBehaviour
     {
         rb.drag = x;
     }
-
+    //particles
     void WallParticle(float vertical)
     {
         var main = slideParticle.main;
@@ -322,10 +351,14 @@ public class Movement : MonoBehaviour
             main.startColor = Color.clear;
         }
     }
-
+    //more particles
     int ParticleSide()
     {
         int particleSide = coll.onRightWall ? 1 : -1;
         return particleSide;
+    }
+    public float getDashSpeed()
+    {
+        return dashSpeed;
     }
 }

@@ -17,13 +17,13 @@ public class PlayerLives : MonoBehaviour
         if(playerLiveCounter <= 0){
             Die();
         }
-        }
+    }
     
 
-void Die(){
-    Debug.Log("Player died");
+    void Die(){
+        Debug.Log("Player died");
 
-    this.enabled = false;
-    GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+        GetComponent<Collider2D>().enabled = false;
     }
 }
