@@ -130,6 +130,7 @@ public class Movement : MonoBehaviour
         //jumping
         if (Input.GetButtonDown("Jump"))
         {
+
             anim.SetTrigger("jump");
 			isJumping = true;
 
@@ -318,7 +319,10 @@ public class Movement : MonoBehaviour
     {
         slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
         ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
-
+        if (wall)
+        {
+            rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
+        }
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += dir * jumpForce;
 
