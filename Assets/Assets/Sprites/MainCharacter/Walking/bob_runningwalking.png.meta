@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 549bebc84f650a1408228bbd75ba29d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4474409395033424046
+    second: bob_runningwalking_0
+  - first:
+      213: -2233307854928595784
+    second: bob_runningwalking_1
+  - first:
+      213: 2140816443762184338
+    second: bob_runningwalking_2
+  - first:
+      213: -6586155915257833545
+    second: bob_runningwalking_3
+  - first:
+      213: 9043020970952410846
+    second: bob_runningwalking_4
+  - first:
+      213: -3192088521544744008
+    second: bob_runningwalking_5
+  - first:
+      213: -8973621676073265227
+    second: bob_runningwalking_6
+  - first:
+      213: -3903147274716871211
+    second: bob_runningwalking_7
+  - first:
+      213: 5732836765908146520
+    second: bob_runningwalking_8
+  - first:
+      213: -6728451406823646486
+    second: bob_runningwalking_9
+  - first:
+      213: -8082421253684600244
+    second: bob_runningwalking_10
+  - first:
+      213: -2678958129791382820
+    second: bob_runningwalking_11
+  - first:
+      213: 6833911497231261723
+    second: bob_runningwalking_12
+  - first:
+      213: -5914708294053385563
+    second: bob_runningwalking_13
+  - first:
+      213: 2440157559218912015
+    second: bob_runningwalking_14
+  - first:
+      213: 9138729976200363761
+    second: bob_runningwalking_15
+  - first:
+      213: -5613526640301161087
+    second: bob_runningwalking_16
+  - first:
+      213: 4877963761970997675
+    second: bob_runningwalking_17
+  - first:
+      213: -1481681710526018233
+    second: bob_runningwalking_18
+  - first:
+      213: -8643452033222596857
+    second: bob_runningwalking_19
+  - first:
+      213: 9167233928610758912
+    second: bob_runningwalking_20
+  - first:
+      213: 7646268139443138286
+    second: bob_runningwalking_21
+  - first:
+      213: 5970110328847053147
+    second: bob_runningwalking_22
+  - first:
+      213: -6862788516187865383
+    second: bob_runningwalking_23
+  - first:
+      213: -7260842147266754393
+    second: bob_runningwalking_24
+  - first:
+      213: 5739942188511245460
+    second: bob_runningwalking_25
+  - first:
+      213: 3619930350730429102
+    second: bob_runningwalking_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bob_runningwalking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 119
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea043aa63ab481e30800000000000000
+      internalID: 4474409395033424046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 296
+        width: 118
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b434e8a652b101e0800000000000000
+      internalID: -2233307854928595784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 294
+        width: 118
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29092cb8635b5bd10800000000000000
+      internalID: 2140816443762184338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 293
+        width: 113
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b718bb07164994a0800000000000000
+      internalID: -6586155915257833545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_4
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 290
+        width: 106
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6c60e39a34f7d70800000000000000
+      internalID: 9043020970952410846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_5
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 290
+        width: 103
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b349bde66c63b3d0800000000000000
+      internalID: -3192088521544744008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_6
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 292
+        width: 102
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b758e041aa477380800000000000000
+      internalID: -8973621676073265227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_7
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 291
+        width: 100
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d58770cb3c35d9c0800000000000000
+      internalID: -3903147274716871211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_8
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 290
+        width: 96
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859114b2aa02f8f40800000000000000
+      internalID: 5732836765908146520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 140
+        width: 95
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea9cc7281dbf92a0800000000000000
+      internalID: -6728451406823646486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 143
+        width: 95
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42ef0931b875df80800000000000000
+      internalID: -8082421253684600244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_11
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 142
+        width: 99
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdac3a156cd62dad0800000000000000
+      internalID: -2678958129791382820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_12
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 141
+        width: 102
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b106de29c4ee6de50800000000000000
+      internalID: 6833911497231261723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_13
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 146
+        width: 108
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa24eed42cbaeda0800000000000000
+      internalID: -5914708294053385563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_14
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 149
+        width: 116
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b3a312f5e2dd120800000000000000
+      internalID: 2440157559218912015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_15
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 148
+        width: 118
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fef2a98e7a43de70800000000000000
+      internalID: 9138729976200363761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_16
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 146
+        width: 110
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18548ab234fb812b0800000000000000
+      internalID: -5613526640301161087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_17
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 144
+        width: 102
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9628b623202b340800000000000000
+      internalID: 4877963761970997675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 103
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d47e5a552007be0800000000000000
+      internalID: -1481681710526018233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 104
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707a3a6bb2a4c0880800000000000000
+      internalID: -8643452033222596857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_20
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 98
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001c0cf10be883f70800000000000000
+      internalID: 9167233928610758912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_21
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 0
+        width: 94
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee25e47c500d1a60800000000000000
+      internalID: 7646268139443138286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_22
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 0
+        width: 98
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51b1dc86b71ad250800000000000000
+      internalID: 5970110328847053147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_23
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 0
+        width: 104
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9defdf3843a72c0a0800000000000000
+      internalID: -6862788516187865383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_24
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 0
+        width: 106
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a80bf1698e4c3b90800000000000000
+      internalID: -7260842147266754393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_25
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 0
+        width: 109
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494bd79420f58af40800000000000000
+      internalID: 5739942188511245460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bob_runningwalking_26
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1
+        width: 112
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea241fa89739c3230800000000000000
+      internalID: 3619930350730429102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
