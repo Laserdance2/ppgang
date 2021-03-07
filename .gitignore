@@ -1,7 +1,5 @@
 UserSettings/
 Temp
 .DS_Store
-Library/Artifacts
-Library/ShaderCache
-Library/PackageCache
+
 Assembly-CSharp.csproj
