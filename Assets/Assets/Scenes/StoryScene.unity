@@ -409,10 +409,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "It\u2019s the year 2040 and people only use cryptocurrency as wel a currency.
-    Fiat money is old, the future is now. Because of the rise of crypto criminal
+  m_text: "It\u2019s the year 2040 and people only use cryptocurrency as a currency.
+    Physical money is old, the future is now. Because of the rise of crypto, criminal
     gangs have taken control of governments all over the world. You are Bob, an average
-    office worker tasked with saving the world from these criminals. Go get em tiger."
+    office worker tasked with saving the world from these criminals. Go get 'em tiger."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
