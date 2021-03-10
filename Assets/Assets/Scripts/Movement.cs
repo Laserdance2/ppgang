@@ -71,6 +71,7 @@ public class Movement : MonoBehaviour
             timeElapsed += Time.deltaTime;
             dashbar.setDash(timeElapsed / dashRecharge + dashCharge - dashUsed);
         }
+        dashbar.setDash(timeElapsed / dashRecharge + dashCharge - dashUsed);
         if (dashCharge >= dashUsed && dashUsed > 0)
         {
             if (timeElapsed >=dashRecharge)
