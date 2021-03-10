@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class Movement : MonoBehaviour
 {
+    public Dashbar dashbar;
     private Collision coll;
     [HideInInspector]
     public Rigidbody2D rb;
@@ -21,8 +22,8 @@ public class Movement : MonoBehaviour
     public float wallJumpLerp = 10;
 	private float dashSpeed = 50;
     private int dashCharge = 3;
-    private int dashUsed = 0;
-    private float dashRecharge = 1f;
+    public int dashUsed = 0;
+    public float dashRecharge = 1f;
 
 
     [Space]
@@ -39,7 +40,7 @@ public class Movement : MonoBehaviour
     private bool hasDashed;
     private bool isDashing;
     private bool atCamEdge;
-    private float timeElapsed = 0;
+    public float timeElapsed = 0;
     public int side = 1;
 
     [Space]
@@ -65,7 +66,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeElapsed += Time.deltaTime;
+        if (dashUsed != 0)
+        {
+            timeElapsed += Time.deltaTime;
+            dashbar.setDash(timeElapsed / dashRecharge + dashCharge - dashUsed);
+        }
         if (dashCharge >= dashUsed && dashUsed > 0)
         {
             if (timeElapsed >=dashRecharge)
@@ -365,4 +370,6 @@ public class Movement : MonoBehaviour
     {
         return dashSpeed;
     }
+
+
 }
