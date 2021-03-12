@@ -3,3 +3,10 @@ Temp
 .DS_Store
 
 Assembly-CSharp.csproj
+
+Library/ArtifactDB
+Library/SourceAssetDB
+Library/ScriptAssemblies/Assembly-CSharp.pdb
+Library/ScriptAssemblies/Assembly-CSharp.dll
+Library/SceneVisibilityState.asset
+Library/StateCache/SceneView/4e/4ea0e3508a270159abdaeddeb5c58299.json
