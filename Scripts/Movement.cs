@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
 public class Movement : MonoBehaviour
 {
@@ -65,6 +66,12 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // zorg dat de player niet beweegt als de inventory open is
+        if(EventSystem.current.IsPointerOverGameObject()){
+            return;
+        }
+
+
         timeElapsed += Time.deltaTime;
         if (dashCharge >= dashUsed && dashUsed > 0)
         {
