@@ -33,9 +33,11 @@ public class Movement : MonoBehaviour
     public bool wallJumped;
     public bool wallSlide;
 	public bool isJumping;
+    public bool doubleJump;
 
 
     [Space]
+    private bool hasDoubleJumped = false;
     private bool groundTouch;
     private bool hasDashed;
     private bool isDashing;
@@ -142,6 +144,11 @@ public class Movement : MonoBehaviour
 
             if (coll.onGround || bjump.inWater)
                 Jump(Vector2.up, false);
+            if (doubleJump == true && hasDoubleJumped == false && coll.onGround == false && coll.onWall == false)
+            {
+                Jump(Vector2.up, false);
+                hasDoubleJumped = true;
+            }
             if (coll.onWall && !coll.onGround && !atCamEdge && !bjump.inWater)
                 WallJump();
         }
@@ -179,6 +186,7 @@ public class Movement : MonoBehaviour
         {
             GroundTouch();
             groundTouch = true;
+            hasDoubleJumped = false;
         }
 
         if(!coll.onGround && groundTouch)
