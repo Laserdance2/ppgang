@@ -15426,6 +15426,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7669216754023123484, guid: c0b832fbe1e824ec9b33c6393277477b, type: 3}
   m_PrefabInstance: {fileID: 377156092}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &387977874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387977875}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &387977875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387977874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.013, y: -0.054, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1762640616}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423702323
 GameObject:
   m_ObjectHideFlags: 0
@@ -40492,6 +40522,7 @@ GameObject:
   - component: {fileID: 1762640612}
   - component: {fileID: 1762640617}
   - component: {fileID: 1762640618}
+  - component: {fileID: 1762640619}
   m_Layer: 0
   m_Name: chinese
   m_TagString: Untagged
@@ -40626,7 +40657,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.55, y: -1.85, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 387977875}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40656,6 +40688,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc3fbe7eec81d14cb4fc813e54e3faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seePlayer: 0
+--- !u!114 &1762640619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762640611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46c3ba95db10ce4d9b52629e5f7a4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 387977875}
+  bulletPrefab: {fileID: 2591492050519138927, guid: cd23a0124a4c106439ed54a0aee8830c, type: 3}
 --- !u!1 &1775701949
 GameObject:
   m_ObjectHideFlags: 0
