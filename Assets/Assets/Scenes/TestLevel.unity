@@ -40491,6 +40491,7 @@ GameObject:
   - component: {fileID: 1762640613}
   - component: {fileID: 1762640612}
   - component: {fileID: 1762640617}
+  - component: {fileID: 1762640618}
   m_Layer: 0
   m_Name: chinese
   m_TagString: Untagged
@@ -40643,6 +40644,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   MoveRight: 0
+--- !u!114 &1762640618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762640611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc3fbe7eec81d14cb4fc813e54e3faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1775701949
 GameObject:
   m_ObjectHideFlags: 0
