@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Enemy_Weapon : MonoBehaviour
 {
-    
-public Transform firePoint;
-public GameObject bulletPrefab;
-
+    public Transform firePointChinese;
+    public GameObject BulletPrefab;
 
     void Update()
     {
@@ -16,8 +14,8 @@ public GameObject bulletPrefab;
         }
     }
 
-    void Shoot(){
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
+    void Shoot()
+    {
+        Instantiate(BulletPrefab, firePointChinese.position, firePointChinese.rotation);
     }
 }
