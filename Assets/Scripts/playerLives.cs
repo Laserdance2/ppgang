@@ -9,16 +9,16 @@ public class PlayerLives : MonoBehaviour
     {
         playerLiveCounter = 100;
     }
-
     
-    public void TakeDamage()
+     public void TakeDamage (int damage)
     {
-        //hier moet de collision + levens eraf komen maar deze functies moeten nog gedefinieerd worden
-        if(playerLiveCounter <= 0){
+        playerLiveCounter -= damage;
+
+        if (playerLiveCounter <=0)
+        {
             Die();
         }
     }
-    
 
     void Die(){
         Debug.Log("Player died");
