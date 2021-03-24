@@ -8,6 +8,8 @@ TagManager:
   - turn
   - enemyBullet
   - bullet
+  - ddb
+  - ejb
   layers:
   - Default
   - TransparentFX

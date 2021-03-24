@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D rb;
     private AnimationScript anim;
-	private CapsuleCollider2D cc;
+    private CapsuleCollider2D cc;
     private BetterJumping bjump;
 
     [Space]
@@ -20,10 +20,11 @@ public class Movement : MonoBehaviour
     public float jumpForce = 50;
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
-	private float dashSpeed = 50;
+    private float dashSpeed = 50;
     private int dashCharge = 3;
     public int dashUsed = 0;
     public float dashRecharge = 1f;
+    private float jumpMult = 1f;
 
 
     [Space]
@@ -32,7 +33,9 @@ public class Movement : MonoBehaviour
     public bool wallGrab;
     public bool wallJumped;
     public bool wallSlide;
-	public bool isJumping;
+    public bool isJumping;
+    public bool isDoubleJumping;
+    public bool canDoubleJump;
 
 
     [Space]
@@ -49,8 +52,8 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpParticle;
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
-	
-	private Vector2 capsuleColliderSize;
+
+    private Vector2 capsuleColliderSize;
 
 
     // Start is called before the first frame update
@@ -59,13 +62,25 @@ public class Movement : MonoBehaviour
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
-		cc = GetComponent<CapsuleCollider2D>();
+        cc = GetComponent<CapsuleCollider2D>();
         bjump = GetComponent<BetterJumping>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!canDoubleJump)
+        {
+            GameObject checkBoxBoots = GameObject.FindGameObjectWithTag("ddb");
+            if (checkBoxBoots == null)
+                canDoubleJump = true;
+        }
+        if (jumpMult == 1f)
+        {
+            GameObject checkBoxBoots = GameObject.FindGameObjectWithTag("ejb");
+            if (checkBoxBoots == null)
+                jumpMult = 1.1f;
+        }
         if (dashUsed != 0)
         {
             timeElapsed += Time.deltaTime;
@@ -74,7 +89,7 @@ public class Movement : MonoBehaviour
         dashbar.setDash(timeElapsed / dashRecharge + dashCharge - dashUsed);
         if (dashCharge >= dashUsed && dashUsed > 0)
         {
-            if (timeElapsed >=dashRecharge)
+            if (timeElapsed >= dashRecharge)
             {
                 dashUsed -= 1;
                 timeElapsed = 0;
@@ -95,10 +110,12 @@ public class Movement : MonoBehaviour
         if (cambound.x < 0.02)
         {
             atCamEdge = true;
-        } else if (0.98 < cambound.x)
+        }
+        else if (0.98 < cambound.x)
         {
             atCamEdge = true;
-        } else 
+        }
+        else
         {
             atCamEdge = false;
         }
@@ -113,8 +130,8 @@ public class Movement : MonoBehaviour
         if (wallGrab && !isDashing)
         {
             rb.gravityScale = 0;
-            if(x > .2f || x < -.2f)
-            rb.velocity = new Vector2(rb.velocity.x, 0);
+            if (x > .2f || x < -.2f)
+                rb.velocity = new Vector2(rb.velocity.x, 0);
 
             float speedModifier = y > 0 ? .5f : 1;
 
@@ -125,10 +142,10 @@ public class Movement : MonoBehaviour
             rb.gravityScale = 3;
         }
         //wallslide
-        if(coll.onWall && !coll.onGround && !isJumping && !atCamEdge && !bjump.inWater)
+        if (coll.onWall && !coll.onGround && !isJumping && !atCamEdge && !bjump.inWater)
         {
-             wallSlide = true;
-             WallSlide();
+            wallSlide = true;
+            WallSlide();
         }
         //not wallslide
         if (!coll.onWall || coll.onGround || bjump.inWater)
@@ -136,14 +153,31 @@ public class Movement : MonoBehaviour
         //jumping
         if (Input.GetButtonDown("Jump"))
         {
+            if (!isJumping)
+            {
+                anim.SetTrigger("jump");
+                isJumping = true;
 
-            anim.SetTrigger("jump");
-			isJumping = true;
-
-            if (coll.onGround || bjump.inWater)
+                if (coll.onGround)
+                    Jump(Vector2.up, false);
+            }
+            if (canDoubleJump && !isDoubleJumping && !coll.onWall && !coll.onGround)
+            {
+                isDoubleJumping = true;
+                anim.SetTrigger("jump");
                 Jump(Vector2.up, false);
+            }
+            if (bjump.inWater)
+            {
+                Jump(Vector2.up, false);
+                anim.SetTrigger("jump");
+            }
+
             if (coll.onWall && !coll.onGround && !atCamEdge && !bjump.inWater)
+            {
                 WallJump();
+                anim.SetTrigger("jump");
+            }
         }
         //dashing
         if (Input.GetButtonDown("Dash") && hasDashed == false && dashUsed < dashCharge)
@@ -160,16 +194,17 @@ public class Movement : MonoBehaviour
             }
         }
         //disabling the jump if you are falling down
-        if (rb.velocity.y <= 0){
-			isJumping = false;
-		}
-		//no rotation to the player
-		if(rb.velocity.x != 0)
-             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-		
-		if (rb.velocity.x == 0)
+        if (rb.velocity.y <= 0)
         {
-			rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+            isJumping = false;
+        }
+        //no rotation to the player
+        if (rb.velocity.x != 0)
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        if (rb.velocity.x == 0)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
         }
 
 
@@ -179,9 +214,10 @@ public class Movement : MonoBehaviour
         {
             GroundTouch();
             groundTouch = true;
+            isDoubleJumping = false;
         }
 
-        if(!coll.onGround && groundTouch)
+        if (!coll.onGround && groundTouch)
         {
             groundTouch = false;
         }
@@ -191,7 +227,7 @@ public class Movement : MonoBehaviour
         if (wallGrab || wallSlide || !canMove)
             return;
 
-        if(x > 0)
+        if (x > 0)
         {
             side = 1;
             anim.Flip(side);
@@ -204,20 +240,20 @@ public class Movement : MonoBehaviour
 
 
     }
-	
+
     //stuff that happens when you are on the ground
     void GroundTouch()
     {
         hasDashed = false;
         isDashing = false;
-		isJumping = false;
+        isJumping = false;
 
         side = anim.sr.flipX ? -1 : 1;
 
         jumpParticle.Play();
-		
+
     }
-	
+
 
     //dash
     private void Dash(float x, float y)
@@ -286,14 +322,14 @@ public class Movement : MonoBehaviour
 
     private void WallSlide()
     {
-        if(coll.wallSide != side)
-         anim.Flip(side * -1);
+        if (coll.wallSide != side)
+            anim.Flip(side * -1);
 
         if (!canMove)
             return;
 
         bool pushingWall = false;
-        if((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
+        if ((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
         {
             pushingWall = true;
         }
@@ -330,7 +366,8 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(-rb.velocity.x, rb.velocity.y);
         }
         rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.velocity += dir * jumpForce;
+
+        rb.velocity += dir * jumpForce * jumpMult;
 
         particle.Play();
     }

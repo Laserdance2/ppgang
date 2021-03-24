@@ -15015,6 +15015,8 @@ MonoBehaviour:
   wallJumped: 0
   wallSlide: 0
   isJumping: 1
+  isDoubleJumping: 0
+  canDoubleJump: 0
   timeElapsed: 0
   side: 1
   dashParticle: {fileID: 786101203}
@@ -15076,7 +15078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9471db8cd939541bbb6e7e25c30bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLiveCounter: 0
+  playerLiveCounter: 100
 --- !u!114 &213030901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39409,7 +39411,7 @@ GameObject:
   - component: {fileID: 1462577790}
   m_Layer: 0
   m_Name: morefeet
-  m_TagString: Untagged
+  m_TagString: ejb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40997,7 +40999,7 @@ GameObject:
   - component: {fileID: 1905618281}
   m_Layer: 0
   m_Name: Boots
-  m_TagString: Untagged
+  m_TagString: ddb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
