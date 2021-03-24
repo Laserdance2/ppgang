@@ -18,4 +18,14 @@ public class CoinCounterScript : MonoBehaviour
     {
         coinText.text = coinAmount.ToString();
     }
+
+    public int getCoinAmount()
+    {
+        return coinAmount;
+    }
+
+    public void setCoinAmount(int n)
+    {
+        coinAmount = n;
+    }
 }
