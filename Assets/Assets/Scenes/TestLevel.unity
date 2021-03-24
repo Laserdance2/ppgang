@@ -15080,7 +15080,7 @@ GameObject:
   - component: {fileID: 363498097}
   - component: {fileID: 363498096}
   m_Layer: 5
-  m_Name: Text_itemDesc
+  m_Name: Text_itemName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15098,7 +15098,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1355256638}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15138,7 +15138,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is a name
+  m_Text: Template
 --- !u!222 &363498097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38335,7 +38335,7 @@ GameObject:
   - component: {fileID: 1241958069}
   - component: {fileID: 1241958068}
   m_Layer: 5
-  m_Name: Text_itemName
+  m_Name: Text_itemDesc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38353,7 +38353,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1355256638}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -38393,7 +38393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gay ass niBBa
+  m_Text: Template
 --- !u!222 &1241958069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38628,8 +38628,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1590334286}
-  - {fileID: 1241958067}
   - {fileID: 363498095}
+  - {fileID: 1241958067}
   - {fileID: 466432536}
   m_Father: {fileID: 1367173612}
   m_RootOrder: 0
@@ -38882,10 +38882,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allItems:
-  - Name: 
-    Desc: 
-    Price: 0
+  - Name: a
+    Desc: b
+    Price: 1
     Icon: {fileID: 0}
+    itemID: 0
+    isPurchased: 0
+  - Name: c
+    Desc: d
+    Price: 2
+    Icon: {fileID: 0}
+    itemID: 0
+    isPurchased: 0
+  - Name: e
+    Desc: f
+    Price: 3
+    Icon: {fileID: 0}
+    itemID: 0
+    isPurchased: 0
+  - Name: g
+    Desc: h
+    Price: 4
+    Icon: {fileID: 0}
+    itemID: 0
+    isPurchased: 0
+  - Name: i
+    Desc: j
+    Price: 5
+    Icon: {fileID: 0}
+    itemID: 0
+    isPurchased: 0
 --- !u!1 &1425295738
 GameObject:
   m_ObjectHideFlags: 0
@@ -39242,6 +39268,7 @@ GameObject:
   - component: {fileID: 1446437053}
   - component: {fileID: 1446437052}
   - component: {fileID: 1446437051}
+  - component: {fileID: 1446437054}
   m_Layer: 5
   m_Name: ShopUI
   m_TagString: Untagged
@@ -39329,6 +39356,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1446437054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446437049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253061c968d03f446b202e76350b0b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1520058037
 GameObject:
   m_ObjectHideFlags: 0
