@@ -10,9 +10,10 @@ public class Enemy_Weapon : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     public bool canShoot;
+    public float initDistToEnemy = -999;
 
     void Start(){
-    shootCooldown = 0;
+    shootCooldown = -2;
     spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -42,6 +43,22 @@ public class Enemy_Weapon : MonoBehaviour
     void Shoot()
     {
         ChangeSprite();
-        Instantiate(BulletPrefab, firePointChinese.position, firePointChinese.rotation);
+        
+
+        // if (initDistToEnemy == -999)
+        //{
+            initDistToEnemy = firePointChinese.localPosition.x;
+        //}
+        int rot;
+        if(GameObject.Find("chinese").GetComponent<enemy_move>().MoveRight){
+            rot = 1;
+        }
+        else{
+            rot = -1;
+        }
+       firePointChinese.localPosition.Set(rot * initDistToEnemy, 0, 0);
+       firePointChinese.localRotation.Set(0, 90 + 90 * rot, 0, 0);
+       GameObject tempBullet = (GameObject)Instantiate(BulletPrefab, new Vector3(rot*initDistToEnemy + firePointChinese.position.x - initDistToEnemy, firePointChinese.position.y, firePointChinese.position.z), new Quaternion(0,90 + 90* -rot, 0, 0));
+       tempBullet.tag = "enemyBullet";
     }
 }
