@@ -30,7 +30,6 @@ public class Enemy_Weapon : MonoBehaviour
         if((GameObject.Find("chinese").GetComponent<Enemy_Shoot>().seePlayer) && (canShoot)){
             Shoot();
             shootCooldown = 0;
-            canShoot = false;
         }
 
         

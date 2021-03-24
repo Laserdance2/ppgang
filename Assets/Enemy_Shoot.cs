@@ -9,6 +9,7 @@ public class Enemy_Shoot : MonoBehaviour
 
 
    void FixedUpdate(){
+       LayerMask mask = LayerMask.GetMask("Player");
              RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector2.right);
        RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector2.left);
 
@@ -22,8 +23,6 @@ public class Enemy_Shoot : MonoBehaviour
         else{
             seePlayer = false;
         }
-
-       LayerMask mask = LayerMask.GetMask("Player");
    }
    
    
