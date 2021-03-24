@@ -29,7 +29,9 @@ public class Weapon : MonoBehaviour
        // firePoint.localPosition.Set(rot * initDistToPlayer, 0, 0);
        firePoint.localRotation.Set(0, 90 + 90 * rot, 0, 0);
         
-        Instantiate(BulletPrefab, new Vector3(rot*initDistToPlayer + firePoint.position.x - initDistToPlayer, firePoint.position.y, firePoint.position.z), new Quaternion(0,90 + 90* -rot, 0, 0));
+        ;
+		GameObject tempBullet = (GameObject)Instantiate(BulletPrefab, new Vector3(rot*initDistToPlayer + firePoint.position.x - initDistToPlayer, firePoint.position.y, firePoint.position.z), new Quaternion(0,90 + 90* -rot, 0, 0));
+        tempBullet.tag = "bullet";
     }
 }
 
