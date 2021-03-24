@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
@@ -11,6 +12,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        this.tag = "bullet";
     }
 
     void OnTriggerEnter2D (Collider2D hitInfo)
@@ -20,7 +22,8 @@ public class Bullet : MonoBehaviour
         {
             enemyC.TakeDamage(damage);
         }
-        Destroy(gameObject);
+        if (hitInfo.tag != "turn" && hitInfo.tag != "bullet")
+            Destroy(gameObject);
     }
 
 }
