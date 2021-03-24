@@ -57,7 +57,7 @@ public class ShopMenu : MonoBehaviour
             return null;
         }
 
-        public Item(int price, int itemid)
+       /* public Item(int price, int itemid)
         {
             Name = getName(itemid);
             Desc = getDesc(itemid);
@@ -66,7 +66,7 @@ public class ShopMenu : MonoBehaviour
             itemID = itemid;
             isPurchased = false;
         }
-
+        */
         
     }
 
