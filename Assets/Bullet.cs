@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         {
             enemyC.TakeDamage(damage);
         }
-        if (hitInfo.tag != "turn" && hitInfo.tag != "bullet")
+        if (hitInfo.tag != "turn" && hitInfo.tag != this.tag)
             Destroy(gameObject);
     }
 
