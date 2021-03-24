@@ -14317,7 +14317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127770853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 0, z: 0}
+  m_LocalPosition: {x: 1.3, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 213030896}
@@ -15682,7 +15682,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePointChinese
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -15694,7 +15694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387977874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.013, y: -0.054, z: 0}
+  m_LocalPosition: {x: 0.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1762640616}
@@ -41198,7 +41198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762640611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.55, y: -1.85, z: 0}
+  m_LocalPosition: {x: -2.537, y: -1.85, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 387977875}
@@ -41226,7 +41226,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762640611}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbc3fbe7eec81d14cb4fc813e54e3faf, type: 3}
   m_Name: 
@@ -41239,13 +41239,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762640611}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d46c3ba95db10ce4d9b52629e5f7a4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePointChinese: {fileID: 387977875}
   BulletPrefab: {fileID: 4464255407975984880, guid: b8ef8103d6e52be44a4220cda59c252d, type: 3}
+  shootCooldown: 0
+  spriteRenderer: {fileID: 1762640615}
+  newSprite: {fileID: 21300000, guid: 05ee40715718ea94a9caba502d213edc, type: 3}
+  canShoot: 0
 --- !u!114 &1762640620
 MonoBehaviour:
   m_ObjectHideFlags: 0
