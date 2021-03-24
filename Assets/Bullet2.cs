@@ -15,12 +15,6 @@ public class Bullet2 : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
-        GameObject Player = (GameObject)hitInfo.gameObject;
-        if(Player.tag == "Player")
-        {
-            Player.TakeDamage(damage);
-            Destroy(this);
-        }
         if (hitInfo.tag != "turn" && hitInfo.tag != this.tag)
             Destroy(gameObject);
     }

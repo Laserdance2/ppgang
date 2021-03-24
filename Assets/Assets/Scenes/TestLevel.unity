@@ -14925,8 +14925,8 @@ GameObject:
   - component: {fileID: 213030897}
   - component: {fileID: 213030898}
   - component: {fileID: 213030899}
-  - component: {fileID: 213030900}
   - component: {fileID: 213030901}
+  - component: {fileID: 213030900}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -15079,6 +15079,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLiveCounter: 100
+  damage: 20
+  slider: {fileID: 933170443}
+  player: {fileID: 0}
 --- !u!114 &213030901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36897,7 +36900,7 @@ GameObject:
   - component: {fileID: 933170443}
   m_Layer: 5
   m_Name: Slider
-  m_TagString: Untagged
+  m_TagString: sl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36969,7 +36972,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -38768,10 +38771,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290236759}
-  - component: {fileID: 1290236760}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: hb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38796,21 +38798,6 @@ RectTransform:
   m_AnchoredPosition: {x: -47, y: 34.751}
   m_SizeDelta: {x: 354.09338, y: 39.437195}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1290236760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290236758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f283e4c7952a6f4699fac50c64d877a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 933170443}
-  playerLives: {fileID: 0}
-  player: {fileID: 213030893}
 --- !u!1 &1297381496
 GameObject:
   m_ObjectHideFlags: 0

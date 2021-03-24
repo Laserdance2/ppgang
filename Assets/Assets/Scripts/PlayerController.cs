@@ -54,9 +54,15 @@ public class PlayerController : MonoBehaviour
         capsuleColliderSize = cc.size;
     }
 
-    private void Update()
+    public void Update()
     {
         CheckInput();
+        if (rb.position.y < -100)
+        {
+            Debug.Log("Dood");
+            Application.Quit();
+            
+        }
     }
 
     private void FixedUpdate()
